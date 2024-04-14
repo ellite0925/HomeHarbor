@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="homepage-container">
+<h1 class="page-title">Create new Listing</h1>
+
+<form class="add-listing-container" action="" method="POST">
+    {% csrf_token %}
+    <table class="listing-form" >
+        {{ form.as_table }}
+    </table>
+    <input class='add-listing-btn' type="submit" value="Add Listing!" class="btn">
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="homepage-container">
+<h1 class="page-title">Agent Details</h1>
+
+
+      <div class="agent-show">
+        <h1>{{ agent.name }}</h1>
+        <p>{{ agent.email }}</p>
+      
+
+      <div class="edit-delete">
+        <a href="{% url 'agents_update' agent.id %}">Edit</a>
+        <a href="{% url 'agents_delete' agent.id %}">Delete</a>
+      </div>
+
+    
+
+  </div>
+
+</div>
+{% endblock %}
